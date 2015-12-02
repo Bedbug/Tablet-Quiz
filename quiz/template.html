@@ -13,7 +13,7 @@
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 45px;
-    background-color: #00b4c4;" ng-click="checkAnswer(0)"  ng-mousedown="click1(answ1answ1)"  ng-mouseup="clickOut1(answ1)">{{option1}}</button>
+    background-color: #00b4c4;" ng-click="checkAnswer(0)"  ng-mousedown="click(0)"  ng-mouseup="clickOut(0)">{{option1}}</button>
 						<button type="button" id = "answ2" ng-show="answerMode" class="well well-md vodafoneBold" style="width: 80%;
     border-radius: 5px;
     margin-right: 0px;
@@ -21,7 +21,7 @@
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 5px;
-    background-color: #00b4c4;" ng-click="checkAnswer(1)">{{option2}}</button>
+    background-color: #00b4c4;" ng-click="checkAnswer(1)" ng-mousedown="click(1)"  ng-mouseup="clickOut(1)">{{option2}}</button>
                         <button type="button" id = "answ3" ng-show="answerMode" class="well well-md vodafoneBold" style="width: 80%;
     border-radius: 5px;
     margin-right: 0px;
@@ -29,7 +29,7 @@
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 5px;
-    background-color: #00b4c4;" ng-click="checkAnswer(2)">{{option3}}</button>
+    background-color: #00b4c4;" ng-click="checkAnswer(2)" ng-mousedown="click(2)"  ng-mouseup="clickOut(2)">{{option3}}</button>
 					</div>
 
 			</ul>

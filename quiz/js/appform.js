@@ -283,21 +283,23 @@ app.directive('quiz', function(quizFactory, $window, $timeout) {
 //                click1tl.add(TweenLite.to(scope.answ1, 0.05, {scaleX:0.5, scaleY:0.5, ease: Power2.easeOut}));
 //                click1tl.stop();
 //           
-             
-            scope.click1 = function(id){
-                var click1tl = new TimelineLite();
+            var answers = [answ1,answ2,answ3]
+            scope.click = function(num){
+                
+                
+                var clicktl = new TimelineLite();
             
-                click1tl.add(TweenLite.to(answ1, 0.2, {scaleX:0.5, scaleY:0.5, ease: Power2.easeOut}));
-                 click1tl.restart();
-                click1tl.play();
+                clicktl.add(TweenLite.to(answers[num], 0.2, {scaleX:0.9, scaleY:0.8, ease: Power2.easeOut}));
+//                 clicktl.restart();
+                clicktl.play();
             }
             
-            scope.clickOut1 = function(){
-                var clickOut1tl = new TimelineLite();
+            scope.clickOut = function(num){
+                var clickOuttl = new TimelineLite();
             
-                clickOut1tl.add(TweenLite.to(answ1, 0.2, {scaleX:1, scaleY:1, ease: Power2.easeOut}));
-                clickOut1tl.restart();
-                clickOut1tl.play();
+                clickOuttl.add(TweenLite.to(answers[num], 0.2, {scaleX:1, scaleY:1, ease: Power2.easeOut}));
+//                clickOuttl.restart();
+                clickOuttl.play();
             }
            
 
