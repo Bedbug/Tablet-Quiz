@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+  <head>
+ 	 <meta charset="utf-8" />
+    <title>AngularJS Form</title>
+    
+    
+    <link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<!-- <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>-->
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+    <script type="text/javascript" src="js/modules/promise-tracker.js"></script>
+    <script type="text/javascript" src="js/giftgiver.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+   
+     
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+   
+  </head>
+  
+<body  data-ng-controller="giftChecker"  style="background-color:#FF0004;">
+
+ 
+<div class="container" style="padding-top: 100px;">
+    <div class="text-center" ><span style="margin-bottom: 5px; font-weight: bold;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; color:#FFFFFF; font-size: 40px;">Tablet Maniac</span></div>
+   <br/><br/>
+    <br/>    <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+    <br/>
+    <br/>
+    <br/>
+    <div  style="color: white; font-size: 50px;">{{message}}</div>
+    <br/>
+    <br/>
+    <br/>
+    <div  style="color: white; font-size: 50px;">{{data}}</div>
+    <form name="helpForm" novalidate role="form">
+      <div class="form-group">
+        <label for="codeinput" style="color:#FFFFFF; font-size: 30px;"> Βάλε τον κωδικό σου!</label>
+        <input type="text" name="codeinput" data-ng-model="code" class="form-control input-lg" required />
+      </div>
+
+     
+
+      <button  ng-show="clear == 0" data-ng-click="submit(); " class="well well-md btn-block " style="align:center; font-size: 30px; color:#FF0004; margin-top:40px;">Εισαγωγή</button>
+        <button  ng-show="clear == 1" data-ng-click="reset(); " class="well well-md btn-block " style="align:center; font-size: 30px; color:#FF0004; margin-top:40px;">Νεος Κωδικός</button>
+       
+      
+    
+      
+    </form>
+     
+</div>
+  
+  <!--This is an AppPage-->
+  <!--<div data-role="page" id="asian" data-add-back-btn="true" > -->
+   <!--<div ng-show="!showQuizVar">-->
+    
+   <!--<div ng-show="QuizActive == 1" class="container" data-role="header">
+    
+        <h1 class="title">QuizApp</h1>
+       <quiz></quiz>
+      
+     <!-- </div> 
+      
+      
+    
+   </div>-->
+
+
+
+</body>
+</html>

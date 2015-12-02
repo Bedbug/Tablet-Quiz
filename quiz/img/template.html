@@ -1,0 +1,51 @@
+<div class="quiz-area" ng-show="inProgress" class="container" style="padding:20px; ">
+	<div ng-show="!quizOver" >
+		<div class='text-center'>
+			<div class ="vodafoneBold starred" data-ng-bind-html="question" style="font-weight:bolder; color:#444a4d; font-size: 50px;  line-height: 120%; padding-left:50px; padding-top:30px;"></div>
+			<!--<label id="questionbox" class ="vodafoneBold" for="questionbox" style="color:#444a4d; font-size: 40px; padding-left:50px; padding-top:30px;">{{question}}</label>-->
+			<ul id="options">
+				<div class='text-center'>
+					<div class="btn-group" >
+						<button type="button" ng-show="answerMode" class="well well-md vodafoneBold" style="width: 150px;
+  border-radius: 20px;
+  margin-right: 45px;
+  font-size: 51px;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-top: 30px; background-color:#00b4c4;" ng-click="checkAnswer(0)">ΝΑΙ</button>
+						<button type="button" ng-show="answerMode" class="well well-md vodafoneBold" style="width: 150px;
+  border-radius: 20px;
+  margin-right: 45px;
+  font-size: 51px;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-top: 30px; background-color:#8f3f97;" ng-click="checkAnswer(1)">ΟΧΙ</button>
+					</div>
+
+			</ul>
+		</div>
+		<!--<button ng-show="answerMode" ng-click="checkAnswer()">Submit</button>
+
+		<div ng-show="!answerMode">
+			<button ng-click="nextQuestion()" class="well well-md btn-block" class="next-question" style="font-size: 30px; color:#FF0004; ">Next</button>
+			<span ng-show="correctAns"></span>
+			<span ng-show="!correctAns"></span>
+		</div>-->
+	</div>
+
+	<div ng-show="quizOver">
+		<h2 ng-show="mesg1" style="color:#FFFFFF; font-size: 50px; padding-left:50px; padding:30px;">This is Message One!</h2>
+		<h2 ng-show="mesg2" style="color:#FFFFFF; font-size: 50px; padding-left:50px; padding:30px;">This is Message Two!</h2>
+		<h2 ng-show="mesg3" style="color:#FFFFFF; font-size: 50px; padding-left:50px; padding:30px;">This is Message Three!</h2>
+		<button ng-show = "endScreen == 1" ng-click="reload();" class="well well-md btn-block VodafoneRG-Bold" class="next-question" style="font-size: 30px; color:#FF0004; width:300px; position: fixed; left: 10px; bottom: 10px;">Eπανεκκίνηση</button>
+		<button ng-show = "endScreen < 1" ng-click="reload();" class="well well-md btn-block VodafoneRG-Bold" class="next-question" style="font-size: 30px; color:#FF0004; width:300px; position: fixed; left: 10px; bottom: 10px;">Επόμενο</button>
+	</div>
+
+	<div id="score">
+			
+	</div>
+</div>
+<div class="intro" ng-hide="inProgress" style="padding:20px; background-color:#FF0004; ">
+	<p>Welcome to the QuizApp</p>
+	<button id="startQuiz" ng-click="start()" class="well well-md btn-block" class="next-question" style="font-size: 30px; color:#FF0004; ">Start the Quiz</button>
+</div>

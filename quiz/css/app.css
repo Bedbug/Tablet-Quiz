@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'VodafoneLt-Regular'; /*a name to be used later*/
+    src: url('../fonts/VodafoneLt-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'VodafoneRG-Regular'; /*a name to be used later*/
+    src: url('../fonts/VodafoneRg-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'VodafoneRG-Bold'; /*a name to be used later*/
+    src: url('../fonts/VodafoneRg-Bold.ttf'); /*URL to font*/
+}
+
+
+div.starred span { color: #EF0404; }
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+label.formtext {
+    font-family: 'VodafoneRG-Regular';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+span.formtext {
+    font-family: 'VodafoneRG-Regular';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.submit {
+    font-family: 'VodafoneRG-Regular';
+    font-size: 20px;
+    color: #904098;
+}
+
+.vodafoneBold{
+    font-family: 'VodafoneRG-Bold';
+}
+
+.vodafoneRegular{
+    font-family: 'VodafoneRG-Regular';
+}
+
+
+input.ng-invalid.ng-dirty {
+    border:3px solid #ff0000;
+}
+
+input.ng-valid.ng-dirty {
+    border:3px solid #15D702;
+}
+
+.well{
+    background-color: #fff;
+    padding: 5px;
+}
